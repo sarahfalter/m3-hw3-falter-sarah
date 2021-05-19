@@ -1,0 +1,144 @@
+@import "variables.less";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    color: @font-color;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    width: @width;
+    height: @height;
+  button {
+      background: @b-color;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 14px;
+      text-transform: uppercase;
+  }
+  h2 {
+    text-transform: uppercase;
+}
+
+}
+header {
+    background: @b-color;
+    height: 80px;
+    ul {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        max-width: 250px;
+        top: 40px;
+        left: 5%;
+        li {
+            display: inline;
+            font-size: 12px;
+            font-weight: 500;
+        }
+    }
+}
+
+.hero {
+    background-image: url(../img/bob-new.jpg);
+    object-fit:scale-down;
+    height: 400px;
+    text-align: center;
+    padding-top: 10%;
+    img {
+        margin-top: 50px;
+        width: 75%;
+        max-width: 450px;
+    }
+    button {
+        display: block;
+        align-content: center;
+        margin: 0 auto;
+    
+    }
+
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    .contain {
+        width: @width;
+        padding: 5%;
+    }
+    p {
+        padding: 2% 0;
+    }
+    img {
+        text-align: center;
+    }
+}
+.contact {
+    background: @primary-neutral;
+    .menu()
+}
+span {
+    color: @span-color;
+    text-transform: uppercase;
+}
+
+footer {
+    background: @dark;
+    border-top: 9px solid @b-color;
+    text-align: center;
+    .menu.contain();
+    img {
+        width: 75%;
+        max-width: 400px;
+    }
+}
+
+
+@media (min-width: 550px) {
+    header {
+        ul {
+            max-width: 400px;
+        }
+        li {
+            font-size: @link-size;
+        }
+    }
+
+}
+
+@media (min-width: 700px) {
+
+    .hero {
+        height: 550px;
+    }
+    .menu, .contact {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 5%;
+        img {
+            max-width: 200px;
+            margin-left: 20%;
+        }
+        .contain {
+            width: 90%;
+        p {
+            margin-top: 2%;
+        }
+         button {
+             margin-top: 2%;
+         }
+        }
+    }
+    
+    }
+
+    @media (max-width: 700px) {
+    .menu, .contact {
+        text-align: center;
+    }
+    img {
+        width: 30%;
+    }
+}
